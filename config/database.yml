@@ -45,5 +45,5 @@ production:
   pool: 5
   username: root
   password: root
-  host: localhost
+  host: localhos
 
