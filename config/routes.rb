@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :animais
+
   map.resources :clientes
 
   map.resources :produtos
