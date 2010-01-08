@@ -8,10 +8,6 @@ class CreateProdutos < ActiveRecord::Migration
     end
   end
 
-      t.timestamps
-    end
-  end
-
   def self.down
     drop_table :produtos
   end
