@@ -7,24 +7,6 @@
 	<title>PetShop.net</title>
 </head>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Animais: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
-</head>
-<body>
-
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield  %>
-
-</body>
-</html>
-
-
-
-
 <body>
 	<div class="wrap">
 		<p id="options"></p>
@@ -36,7 +18,11 @@
 		<div class="clear"></div>
 
 		<div id="left">
-			<%= ycd %>
+
+      <p style="color: green"><%= flash[:notice] %></p>
+
+      <%= yield  %>
+
 		</div>
 
 		<!--Comentario inserido para desabilitar a caixa de dados do sistema....
