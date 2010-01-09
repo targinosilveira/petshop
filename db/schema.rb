@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100109025505) do
+ActiveRecord::Schema.define(:version => 20100109111200) do
 
   create_table "animais", :force => true do |t|
     t.string   "nome"
@@ -23,7 +23,25 @@ ActiveRecord::Schema.define(:version => 20100109025505) do
     t.string   "endereco"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "complemento"
+    t.string   "bairro"
+    t.string   "cep"
+    t.integer  "uf_id"
+    t.integer  "cidade_id"
+    t.string   "celular"
+    t.string   "celular_secundario"
+    t.string   "telefone_residencial"
+    t.string   "telefone_trabalho"
+    t.string   "outro_telefone"
+    t.string   "email"
+    t.string   "twitter"
+    t.integer  "user_id"
+    t.string   "rg"
+    t.string   "cpf_cnpj"
   end
+
+  add_index "clientes", ["user_id"], :name => "index_clientes_on_user_id"
+  add_index "clientes", ["nome"], :name => "index_clientes_on_nome"
 
   create_table "produtos", :force => true do |t|
     t.string   "descricao"
