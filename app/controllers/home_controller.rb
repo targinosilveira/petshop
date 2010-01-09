@@ -1,5 +1,4 @@
-class HomeController < ApplicationController
-  render :login
+class HomeController < ApplicationControl
 
   def index
 
