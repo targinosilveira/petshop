@@ -12,5 +12,8 @@
 <%= check_box_tag 'remember_me', '1', @remember_me %></p>
 -->
 
-<p><%= submit_tag 'Log in' %></p>
+<p>
+  <%= submit_tag 'Log in' %>
+  <%= link_to "Registre-se gratuitamente", :controller=>"users", :action=>"new" %>
+</p>
 <% end -%>

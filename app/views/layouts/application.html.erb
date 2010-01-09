@@ -7,18 +7,24 @@
     <meta name="author" content="Targino Silveira Development (targinosilveira.com)"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" media="screen"/>
     <title>PetShop WEB ERP</title>
-    <%= javascript_include_tag :all %>
+    <%= javascript_include_tag :all %>
+
       <body>
         <div id="container">
 
-        	<div id="sponsor">
-        	</div>
+        <div id="sponsor">
+        </div>
 
           <div id="menu">
+            <%= render :partial => "home/menu" %>
           </div>
 
           <div id="contents">
+            <%= flash[:notice] if flash[:notice] %>
+            <%= flash[:error] if flash[:error] %>
+            
             <%= yield %>
+            
           </div>
 
           <div id="footer">
