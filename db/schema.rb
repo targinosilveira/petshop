@@ -9,11 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100109111200) do
+ActiveRecord::Schema.define(:version => 20100109114108) do
 
   create_table "animais", :force => true do |t|
     t.string   "nome"
     t.integer  "cliente_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cidades", :force => true do |t|
+    t.string   "nome"
+    t.integer  "estado_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,6 +49,13 @@ ActiveRecord::Schema.define(:version => 20100109111200) do
 
   add_index "clientes", ["user_id"], :name => "index_clientes_on_user_id"
   add_index "clientes", ["nome"], :name => "index_clientes_on_nome"
+
+  create_table "estados", :force => true do |t|
+    t.string   "sigla"
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "produtos", :force => true do |t|
     t.string   "descricao"
