@@ -1,4 +1,7 @@
 class AnimaisController < ApplicationController
+
+  before_filter :login_required
+
   # GET /animais
   # GET /animais.xml
   def index

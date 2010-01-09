@@ -1,2 +1,10 @@
 <%= link_to "Home", :controller=> "home", :action => "index" %> |
-<%= link_to "Sair do Sistema", "/logout" %>
+<% if logged_in? %>
+  <%= link_to "Clientes", :controller => "clientes" %> |
+<% end %>
+<% if logged_in? %>
+  <%= link_to "Produtos", :controller => "produtos" %> | 
+<% end %>
+<% if logged_in? %>
+  <%= link_to "Sair do Sistema", "/logout" %>
+<% end %>
