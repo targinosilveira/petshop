@@ -4,13 +4,65 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :nome %><br />
+    <%= f.label :nome, "Nome: " %><br />
     <%= f.text_field :nome %>
   </p>
   <p>
-    <%= f.label :endereco %><br />
+    <%= f.label :endereco, "Endereço: " %><br />
     <%= f.text_field :endereco %>
   </p>
+  <p>
+    <%= f.label :complemento, "Complemento: " %><br />
+    <%= f.text_field :complemento %>
+  </p>
+  <p>
+    <%= f.label :bairro, "Bairro: " %><br />
+    <%= f.text_field :bairro %>
+  </p>
+  <p>
+    <%= f.label :cep, "CEP: " %><br />
+    <%= f.text_field :cep %>
+  </p>
+  <p>
+    <%= f.label :uf_id, "UF: " %><br />
+    <%= f.text_field :uf_id %>
+  </p>
+  <p>
+    <%= f.label :cidade_id, "Cidade : " %><br />
+    <%= f.text_field :cidade_id %>
+  </p>
+  <p>
+    <%= f.label :celular, "Celular: " %><br />
+    <%= f.text_field :celular %>
+  </p>
+  <p>
+    <%= f.label :celular_secundario, "Celular II: " %><br />
+    <%= f.text_field :celular_secundario %>
+  </p>
+  <p>
+    <%= f.label :telefone_residencial, "Tel. Residencial: " %><br />
+    <%= f.text_field :telefone_residencial %>
+  </p>
+  <p>
+    <%= f.label :telefone_trabalho, "Tel. Trabalho: " %><br />
+    <%= f.text_field :telefone_trabalho %>
+  </p>
+  <p>
+    <%= f.label :outros_telefone, "Outros Telefones: " %><br />
+    <%= f.text_field :outros_telefones %>
+  </p>
+    
+    add_column :clientes, :email, :string
+    add_column :clientes, :twitter, :string
+    add_column :clientes, :user_id, :integer
+    add_column :clientes, :rg, :string
+    add_column :clientes, :cpf_cnpj, :string
+    add_index(:clientes, :user_id)
+    add_index(:clientes, :nome)
+
+
+
+
   <p>
     <%= f.submit "Create" %>
   </p>
