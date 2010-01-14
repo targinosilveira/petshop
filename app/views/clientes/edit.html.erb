@@ -3,69 +3,95 @@
 <% form_for(@cliente) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :nome, "Nome: " %><br />
-    <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.label :endereco, "Endereço: " %><br />
-    <%= f.text_field :endereco %>
-  </p>
-  <p>
-    <%= f.label :complemento, "Complemento: " %><br />
-    <%= f.text_field :complemento %>
-  </p>
-  <p>
-    <%= f.label :bairro, "Bairro: " %><br />
-    <%= f.text_field :bairro %>
-  </p>
-  <p>
-    <%= f.label :cep, "CEP: " %><br />
-    <%= f.text_field :cep %>
-  </p>
-  <p>
-    <%= f.label :uf_id, "UF: " %><br />
-    <%= f.text_field :uf_id %>
-  </p>
-  <p>
-    <%= f.label :cidade_id, "Cidade : " %><br />
-    <%= f.text_field :cidade_id %>
-  </p>
-  <p>
-    <%= f.label :celular, "Celular: " %><br />
-    <%= f.text_field :celular %>
-  </p>
-  <p>
-    <%= f.label :celular_secundario, "Celular II: " %><br />
-    <%= f.text_field :celular_secundario %>
-  </p>
-  <p>
-    <%= f.label :telefone_residencial, "Tel. Residencial: " %><br />
-    <%= f.text_field :telefone_residencial %>
-  </p>
-  <p>
-    <%= f.label :telefone_trabalho, "Tel. Trabalho: " %><br />
-    <%= f.text_field :telefone_trabalho %>
-  </p>
-  <p>
-    <%= f.label :email, "E-mail: " %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :twitter, "Twitter: " %><br />
-    <%= f.text_field :twitter %>
-  </p>
-  <p>
-    <%= f.label :rg, "RG: " %><br />
-    <%= f.text_field :twitter %>
-  </p>
-  <p>
-    <%= f.label :cpf_cnpj, "CPF/CNPJ: " %><br />
-    <%= f.text_field :twitter %>
-  </p>
-  <p>
-    <%= f.submit "Voltar" %>
-  </p>
+  <table>
+  <tr>
+    <td colspan="2">
+      <%= f.label :nome, "Nome: " %><br />
+      <%= f.text_field :nome, :size => "40" %>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <%= f.label :endereco, "Endereço: " %><br />
+      <%= f.text_field :endereco, :size => "40" %>
+   </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <%= f.label :rg, "RG: " %><br />
+     <%= f.text_field :rg %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <%= f.label :cpf_cnpj, "CPF/CNPJ: " %><br />
+      <%= f.text_field :twitter %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <%= f.label :complemento, "Complemento: " %><br />
+      <%= f.text_field :complemento, :size => "40" %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :bairro, "Bairro: " %><br />
+      <%= f.text_field :bairro, :size => "20" %>
+    </td>
+    <td>
+      <%= f.label :cep, "CEP: " %><br />
+      <%= f.text_field :cep, :size => "10" %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :uf_id, "UF: " %><br />
+      <%= f.text_field :uf_id, :size => "4" %>
+    </td>
+    <td>
+      <%= f.label :cidade_id, "Cidade : " %><br />
+      <%= f.text_field :cidade_id %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :telefone_residencial, "Tel. Residencial: " %><br />
+      <%= f.text_field :telefone_residencial, :size => "12" %>
+    </td>
+    <td>
+      <%= f.label :telefone_trabalho, "Tel. Trabalho: " %><br />
+      <%= f.text_field :telefone_trabalho, :size => "12" %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :celular, "Celular: " %><br />
+      <%= f.text_field :celular, :size => "12" %>
+    </td>
+    <td>
+      <%= f.label :celular_secundario, "Celular II: " %><br />
+      <%= f.text_field :celular_secundario, :size => "12" %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :email, "E-mail: " %><br />
+      <%= f.text_field :email %>
+    </td>
+    <td>
+      <%= f.label :twitter, "Twitter: " %><br />
+      <%= f.text_field :twitter %>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <%= f.submit "Atualizar" %>
+    </td>
+  </tr>
+</table>
+  
 <% end %>
 
 <%= link_to 'Mostrar', @cliente %> |
