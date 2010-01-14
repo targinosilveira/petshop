@@ -37,7 +37,7 @@ class SessionsController < ApplicationController
 protected
   # Track failed login attempts
   def note_failed_signin
-    flash[:error] = "Couldn't log you in as '#{params[:login]}'"
-    logger.warn "Failed login for '#{params[:login]}' from #{request.remote_ip} at #{Time.now.utc}"
+    flash[:error] = "Não foi possivel logar-se com o login '#{params[:login]}'"
+    logger.warn "Falha de login para '#{params[:login]}' de #{request.remote_ip} em #{Time.now.utc}"
   end
 end

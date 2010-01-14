@@ -1,12 +1,17 @@
-<h1>Editing produto</h1>
+<h1>Editando Produto</h1>
 
 <% form_for(@produto) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.submit "Update" %>
+    <%= f.label :descricao, "Descrição: " %><br />
+    <%= f.text_field :descricao %>
+  </p>
+
+  <p>
+    <%= f.submit "Atualizar" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @produto %> |
-<%= link_to 'Back', produtos_path %>
+<%= link_to 'Exibir', @produto %> |
+<%= link_to 'Voltar', produtos_path %>

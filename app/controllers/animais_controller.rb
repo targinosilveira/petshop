@@ -47,7 +47,7 @@ class AnimaisController < ApplicationController
 
     respond_to do |format|
       if @animal.save
-        flash[:notice] = 'Animal was successfully created.'
+        flash[:notice] = 'Animal salvo com sucesso.'
         format.html { redirect_to(@animal) }
         format.xml  { render :xml => @animal, :status => :created, :location => @animal }
       else
@@ -64,7 +64,7 @@ class AnimaisController < ApplicationController
 
     respond_to do |format|
       if @animal.update_attributes(params[:animal])
-        flash[:notice] = 'Animal was successfully updated.'
+        flash[:notice] = 'Animal atualizado com sucesso.'
         format.html { redirect_to(@animal) }
         format.xml  { head :ok }
       else

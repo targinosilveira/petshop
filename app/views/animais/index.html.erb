@@ -1,4 +1,4 @@
-<h1>Listing animais</h1>
+<h1>Listando Animais</h1>
 
 <table>
   <tr>
@@ -10,13 +10,13 @@
   <tr>
     <td><%=h animal.nome %></td>
     <td><%=h animal.cliente_id %></td>
-    <td><%= link_to 'Show', animal %></td>
-    <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
-    <td><%= link_to 'Destroy', animal, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Exibir', animal %></td>
+    <td><%= link_to 'Editar', edit_animal_path(animal) %></td>
+    <td><%= link_to 'Excluir', animal, :confirm => 'Você deseja mesmo excluir esse registro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New animal', new_animal_path %>
+<%= link_to 'Novo', new_animal_path %>

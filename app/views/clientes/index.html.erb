@@ -12,7 +12,7 @@
     <td><%=h cliente.endereco %></td>
     <td><%= link_to 'Exibir', cliente %></td>
     <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
-    <td><%= link_to 'Excluir', cliente, :confirm => 'Você tem certeza?', :method => :delete %></td>
+    <td><%= link_to 'Excluir', cliente, :confirm => 'Você tem certeza que deseja excluir esse registro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

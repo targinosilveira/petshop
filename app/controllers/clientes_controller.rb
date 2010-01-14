@@ -47,7 +47,7 @@ class ClientesController < ApplicationController
 
     respond_to do |format|
       if @cliente.save
-        flash[:notice] = 'Cliente was successfully created.'
+        flash[:notice] = 'Cliente salvo com sucesso.'
         format.html { redirect_to(@cliente) }
         format.xml  { render :xml => @cliente, :status => :created, :location => @cliente }
       else
@@ -64,7 +64,7 @@ class ClientesController < ApplicationController
 
     respond_to do |format|
       if @cliente.update_attributes(params[:cliente])
-        flash[:notice] = 'Cliente was successfully updated.'
+        flash[:notice] = 'Cliente atualizado com sucesso.'
         format.html { redirect_to(@cliente) }
         format.xml  { head :ok }
       else
