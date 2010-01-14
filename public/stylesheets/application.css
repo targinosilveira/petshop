@@ -14,18 +14,18 @@ body {
 	height: auto;
 	text-align: left;
 	background-color: #CACACA;
-	#border: 1px solid #676767;
+	/*#border: 1px solid #676767;*/
 }
 
 #sponsor {
 	height: 50px;
-	#border: 1px doted;
+	/*#border: 1px doted;*/
 	border-color: #00CC66;
 }
 
 #menu {
 	height: 30px;
-	#border: 1px dotted black;
+	/*#border: 1px dotted black;*/
 	background-color: #D9A82E;
 }
 
@@ -38,13 +38,13 @@ body {
 
 #contents {
 	height: auto;
-	#border: 1px dotted black;
-    background-color: #CACACA;
+	/*#border: 1px dotted black;*/
+        background-color: #CACACA;
 }
 
 #footer {
 	height: 35px;
-	#border: 1px dotted black;
+	/*#border: 1px dotted black;*/
 	background-color: #D9A82E;
 }
 
@@ -58,3 +58,6 @@ body {
 	color: #227CE8
 }
 
+fieldset{
+	border:solid 1px #DEDEDE;
+}
