@@ -27,6 +27,7 @@ class ClientesController < ApplicationController
   # GET /clientes/new
   # GET /clientes/new.xml
   def new
+    @estados = Estado.all
     @cliente = Cliente.new
 
     respond_to do |format|

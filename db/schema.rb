@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100109114108) do
+ActiveRecord::Schema.define(:version => 20100115012633) do
 
   create_table "animais", :force => true do |t|
     t.string   "nome"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(:version => 20100109114108) do
     t.string   "complemento"
     t.string   "bairro"
     t.string   "cep"
-    t.integer  "uf_id"
     t.integer  "cidade_id"
     t.string   "celular"
     t.string   "celular_secundario"
@@ -45,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20100109114108) do
     t.integer  "user_id"
     t.string   "rg"
     t.string   "cpf_cnpj"
+    t.integer  "estado_id"
   end
 
   add_index "clientes", ["user_id"], :name => "index_clientes_on_user_id"
