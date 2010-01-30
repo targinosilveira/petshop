@@ -147,3 +147,501 @@ Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
 Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:00:41) [GET]
 Rendering home/index
 Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:23:43) [GET]
+Rendering home/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:23:45) [GET]
+Rendering home/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:24:47) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::SITE_CONFIG) on line #3 of app/views/layouts/themes.html.erb:
+1: <html>
+2:   <head>
+3:     <title><%=h SITE_CONFIG[:app_name] %> | <%=h yield(:title) %></title>
+4:     <%= use_theme('slicehost') %>
+5:   </head>
+6:   <body>
+
+    app/views/layouts/themes.html.erb:3
+
+Rendered rescues/_trace (197.8ms)
+Rendered rescues/_request_and_response (3.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:25:43) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::SITE_CONFIG) on line #3 of app/views/layouts/themes.html.erb:
+1: <html>
+2:   <head>
+3:     <title><%=h SITE_CONFIG[:app_name] %> | <%=h yield(:title) %></title>
+4:     <%= use_theme('slicehost') %>
+5:   </head>
+6:   <body>
+
+    app/views/layouts/themes.html.erb:3
+
+Rendered rescues/_trace (69.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:26:04) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47layouts47themes46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected $undefined
+...ody>\n  \n    <div id='root'>\n      <div id='header'>\n\n  ...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...<div id='root'>\n      <div id='header'>\n\n        <div id=...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected $undefined
+...ot'>\n      <div id='header'>\n\n        <div id='logo'>\n  ...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...d='header'>\n\n        <div id='logo'>\n          "
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected $undefined
+...'>\n\n        <div id='logo'>\n          "
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n        </div>\n        \n   ...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:16: unknown regexp option - l
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:16: syntax error, unexpected $undefined
+... @output_buffer.concat "</li>\n          \n          "
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:18: syntax error, unexpected $undefined, expecting ')'
+...nk? ; @output_buffer.concat "\n            <li>"
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to "Log in" ).to_s); @output_buffer.c...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:20: unknown regexp option - l
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:20: syntax error, unexpected $undefined
+... @output_buffer.concat "</li>\n\n          "
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:22: syntax error, unexpected $undefined, expecting ')'
+;  else ; @output_buffer.concat "\n            <li>"
+                                  ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to "Log out <span class=\"small\">(us...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:23: syntax error, unexpected kCLASS, expecting kDO or '{' or '('
+...( link_to "Log out <span class=\"small\">(username)</span>" ...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:52: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47themes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>"
+
+; @output_buffer.concat((h  <%=h yield(:title) ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( use_theme('slicehost') ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n  \n    <div id='root'>\n      <div id='header'>\n\n        <div id='logo'>\n          "
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) ).to_s); @output_buffer.concat "\n        </div>\n        \n        <ul id='navigation'>\n          <li>"
+
+
+
+; @output_buffer.concat(( link_to "Home" ).to_s); @output_buffer.concat "</li>\n          \n          "
+
+;  if session[:user_id].blank? ; @output_buffer.concat "\n            <li>"
+; @output_buffer.concat(( link_to "Log in" ).to_s); @output_buffer.concat "</li>\n            <li>"
+; @output_buffer.concat(( link_to "Contact us" ).to_s); @output_buffer.concat "</li>\n\n          "
+
+;  else ; @output_buffer.concat "\n            <li>"
+; @output_buffer.concat(( link_to "Log out <span class=\"small\">(username)</span>" ).to_s); @output_buffer.concat "</li>\n          \n          "
+
+;  end ; @output_buffer.concat "\n        </ul>\n        <div class='clear'></div>\n      </div>\n\n      <div id='contents'>\n        <div id='page_title_container'>\n          <h1 class='title'>"
+
+
+
+
+
+
+; @output_buffer.concat(( yield(:title) || "Untitled" ).to_s); @output_buffer.concat "</h1>\n          <h3 class='subtitle'>"
+; @output_buffer.concat(( yield(:subtitle) || "Description goes here" ).to_s); @output_buffer.concat "</h3>\n        </div>\n        \n        "
+
+
+; @output_buffer.concat(( display_flash(flash) ).to_s); @output_buffer.concat "\n        \n        "
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n        \n        <div id='root_footer'></div>\n\n      </div>\n      \n      <div id='footer'>\n        &copy "
+
+
+
+
+
+
+; @output_buffer.concat(( Time.now.year ).to_s); @output_buffer.concat " "; @output_buffer.concat((h SITE_CONFIG[:copyright] ).to_s); @output_buffer.concat ". All Rights Reserved.\n      </div>\n      \n    </div>\n  </body>\n</html>\n"
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:52:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:347:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected $undefined
+...ody>\n  \n    <div id='root'>\n      <div id='header'>\n\n  ...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...<div id='root'>\n      <div id='header'>\n\n        <div id=...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected $undefined
+...ot'>\n      <div id='header'>\n\n        <div id='logo'>\n  ...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...d='header'>\n\n        <div id='logo'>\n          "
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:4: syntax error, unexpected $undefined
+...'>\n\n        <div id='logo'>\n          "
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n        </div>\n        \n   ...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:16: unknown regexp option - l
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:16: syntax error, unexpected $undefined
+... @output_buffer.concat "</li>\n          \n          "
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:18: syntax error, unexpected $undefined, expecting ')'
+...nk? ; @output_buffer.concat "\n            <li>"
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to "Log in" ).to_s); @output_buffer.c...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:20: unknown regexp option - l
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:20: syntax error, unexpected $undefined
+... @output_buffer.concat "</li>\n\n          "
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:22: syntax error, unexpected $undefined, expecting ')'
+;  else ; @output_buffer.concat "\n            <li>"
+                                  ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to "Log out <span class=\"small\">(us...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:23: syntax error, unexpected kCLASS, expecting kDO or '{' or '('
+...( link_to "Log out <span class=\"small\">(username)</span>" ...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:52: syntax error, unexpected kENSURE, expecting $end) on line #4 of app/views/layouts/themes.html.erb:
+1: <html>
+2:   <head>
+3:     <title><%=h  <%=h yield(:title) %></title>
+4:     <%= use_theme('slicehost') %>
+5:   </head>
+6:   <body>
+7:   
+
+    app/views/layouts/themes.html.erb:52:in `compile!'
+
+Rendered rescues/_trace (226.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:26:12) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+
+ActionView::TemplateError (undefined method `use_theme' for #<ActionView::Base:0xb76c0f90>) on line #4 of app/views/layouts/themes.html.erb:
+1: <html>
+2:   <head>
+3:     
+4:     <%= use_theme('slicehost') %>
+5:   </head>
+6:   <body>
+7:   
+
+    app/views/layouts/themes.html.erb:4
+
+Rendered rescues/_trace (66.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:26:22) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::SITE_CONFIG) on line #12 of app/views/layouts/themes.html.erb:
+9:       <div id='header'>
+10: 
+11:         <div id='logo'>
+12:           <%= link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) %>
+13:         </div>
+14:         
+15:         <ul id='navigation'>
+
+    app/views/layouts/themes.html.erb:12
+
+Rendered rescues/_trace (219.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:15) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 63ms (View: 59, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:19) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:20) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:21) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 31ms (View: 29, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:22) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:23) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 24ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:24) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:25) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 33ms (View: 30, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-30 02:29:41) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 30ms (View: 27, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-30 02:29:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
