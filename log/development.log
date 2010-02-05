@@ -843,3 +843,1361 @@ ActionController::RoutingError (No route matches "/images/logo.png" with {:metho
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (48.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:45:59) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47layouts47themes46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:44: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47themes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>"
+
+; @output_buffer.concat((h SITE_CONFIG[:app_name] ).to_s); @output_buffer.concat " | "; @output_buffer.concat((h yield(:title) ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( use_theme('slicehost') ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n  \n    <div id='root'>\n      <div id='header'>\n\n        <div id='logo'>\n          "
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) ).to_s); @output_buffer.concat "\n        </div>\n        \n        <ul id='navigation'>\n          <li>"
+
+
+
+; @output_buffer.concat(( link_to "Home" ).to_s); @output_buffer.concat "</li>\n          "
+;  end ; @output_buffer.concat "\n        </ul>\n        <div class='clear'></div>\n      </div>\n\n      <div id='contents'>\n        <div id='page_title_container'>\n          <h1 class='title'>"
+
+
+
+
+
+
+; @output_buffer.concat(( yield(:title) || "Untitled" ).to_s); @output_buffer.concat "</h1>\n          <h3 class='subtitle'>"
+; @output_buffer.concat(( yield(:subtitle) || "Description goes here" ).to_s); @output_buffer.concat "</h3>\n        </div>\n        \n        "
+
+
+; @output_buffer.concat(( display_flash(flash) ).to_s); @output_buffer.concat "\n        \n        "
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n        \n        <div id='root_footer'></div>\n\n      </div>\n      \n      <div id='footer'>\n        &copy "
+
+
+
+
+
+
+; @output_buffer.concat(( Time.now.year ).to_s); @output_buffer.concat " "; @output_buffer.concat((h SITE_CONFIG[:copyright] ).to_s); @output_buffer.concat ". All Rights Reserved.\n      </div>\n      \n    </div>\n  </body>\n</html>\n"
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:44:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:347:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:44: syntax error, unexpected kENSURE, expecting $end) on line #44 of app/views/layouts/themes.html.erb:
+41:   </body>
+42: </html>
+
+    app/views/layouts/themes.html.erb:44:in `compile!'
+
+Rendered rescues/_trace (73.6ms)
+Rendered rescues/_request_and_response (3.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (19.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:48:38) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47layouts47themes46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:44: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47themes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>"
+
+; @output_buffer.concat((h SITE_CONFIG[:app_name] ).to_s); @output_buffer.concat " | "; @output_buffer.concat((h yield(:title) ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( use_theme('slicehost') ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n  \n    <div id='root'>\n      <div id='header'>\n\n        <div id='logo'>\n          "
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) ).to_s); @output_buffer.concat "\n        </div>\n        \n        <ul id='navigation'>\n          <li>"
+
+
+
+; @output_buffer.concat(( link_to "Home" ).to_s); @output_buffer.concat "</li>\n          "
+;  end ; @output_buffer.concat "\n        </ul>\n        <div class='clear'></div>\n      </div>\n\n      <div id='contents'>\n        <div id='page_title_container'>\n          <h1 class='title'>"
+
+
+
+
+
+
+; @output_buffer.concat(( yield(:title) || "Untitled" ).to_s); @output_buffer.concat "</h1>\n          <h3 class='subtitle'>"
+; @output_buffer.concat(( yield(:subtitle) || "Description goes here" ).to_s); @output_buffer.concat "</h3>\n        </div>\n        \n        "
+
+
+; @output_buffer.concat(( display_flash(flash) ).to_s); @output_buffer.concat "\n        \n        "
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n        \n        <div id='root_footer'></div>\n\n      </div>\n      \n      <div id='footer'>\n        &copy "
+
+
+
+
+
+
+; @output_buffer.concat(( Time.now.year ).to_s); @output_buffer.concat " "; @output_buffer.concat((h SITE_CONFIG[:copyright] ).to_s); @output_buffer.concat ". All Rights Reserved.\n      </div>\n      \n    </div>\n  </body>\n</html>\n"
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:44:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:347:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:44: syntax error, unexpected kENSURE, expecting $end) on line #44 of app/views/layouts/themes.html.erb:
+41:   </body>
+42: </html>
+
+    app/views/layouts/themes.html.erb:44:in `compile!'
+
+Rendered rescues/_trace (228.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:49:23) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47layouts47themes46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:42: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47themes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>"
+
+; @output_buffer.concat((h SITE_CONFIG[:app_name] ).to_s); @output_buffer.concat " | "; @output_buffer.concat((h yield(:title) ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( use_theme('slicehost') ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n  \n    <div id='root'>\n      <div id='header'>\n\n        <div id='logo'>\n          "
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) ).to_s); @output_buffer.concat "\n        </div>\n        \n        <ul id='navigation'>\n          <li>"
+
+
+
+; @output_buffer.concat(( link_to "Home" ).to_s); @output_buffer.concat "</li>\n          "
+;  end ; @output_buffer.concat "\n        </ul>\n        <div class='clear'></div>\n      </div>\n\n      <div id='contents'>\n        <div id='page_title_container'>\n          <h1 class='title'>"
+
+
+
+
+
+
+; @output_buffer.concat(( yield(:title) || "Untitled" ).to_s); @output_buffer.concat "</h1>\n          <h3 class='subtitle'>"
+; @output_buffer.concat(( yield(:subtitle) || "Description goes here" ).to_s); @output_buffer.concat "</h3>\n        </div>\n        \n        "
+
+
+; @output_buffer.concat(( display_flash(flash) ).to_s); @output_buffer.concat "\n        \n        "
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n        \n        <div id='root_footer'></div>\n\n      </div>\n      \n      <div id='footer'>\n        &copy "
+
+
+
+
+
+
+; @output_buffer.concat(( Time.now.year ).to_s); @output_buffer.concat " "; @output_buffer.concat((h SITE_CONFIG[:copyright] ).to_s); @output_buffer.concat ". All Rights Reserved.\n      </div>\n     \n  </body>\n</html>"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:42:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:347:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:42: syntax error, unexpected kENSURE, expecting $end) on line #42 of app/views/layouts/themes.html.erb:
+39:      
+40:   </body>
+41: </html>
+
+    app/views/layouts/themes.html.erb:42:in `compile!'
+
+Rendered rescues/_trace (215.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:49:52) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47layouts47themes46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47themes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>"
+
+; @output_buffer.concat((h SITE_CONFIG[:app_name] ).to_s); @output_buffer.concat " | "; @output_buffer.concat((h yield(:title) ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( use_theme('slicehost') ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n  \n    <div id='root'>\n      <div id='header'>\n\n        <div id='logo'>\n          "
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) ).to_s); @output_buffer.concat "\n        </div>\n        \n        <ul id='navigation'>\n          <li>"
+
+
+
+; @output_buffer.concat(( link_to "Home" ).to_s); @output_buffer.concat "</li>\n          "
+;  end ; @output_buffer.concat "\n        </ul>\n        <div class='clear'></div>\n      </div>\n\n      <div id='contents'>\n        <div id='page_title_container'>\n          <h1 class='title'>"
+
+
+
+
+
+
+; @output_buffer.concat(( yield(:title) || "Untitled" ).to_s); @output_buffer.concat "</h1>\n          <h3 class='subtitle'>"
+; @output_buffer.concat(( yield(:subtitle) || "Description goes here" ).to_s); @output_buffer.concat "</h3>\n        </div>\n        \n        "
+
+
+; @output_buffer.concat(( display_flash(flash) ).to_s); @output_buffer.concat "\n        \n        "
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n        \n        <div id='root_footer'></div>\n\n      </div>\n      \n      <div id='footer'>\n        &copy . All Rights Reserved.\n      </div>\n      \n    </div>\n  </body>\n</html>"
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:347:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43: syntax error, unexpected kENSURE, expecting $end) on line #43 of app/views/layouts/themes.html.erb:
+40:     </div>
+41:   </body>
+42: </html>
+
+    app/views/layouts/themes.html.erb:43:in `compile!'
+
+Rendered rescues/_trace (237.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:50:51) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47layouts47themes46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:42: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47themes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>"
+
+; @output_buffer.concat((h SITE_CONFIG[:app_name] ).to_s); @output_buffer.concat " | "; @output_buffer.concat((h yield(:title) ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( use_theme('slicehost') ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n  \n    <div id='root'>\n      <div id='header'>\n\n        <div id='logo'>\n          "
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) ).to_s); @output_buffer.concat "\n        </div>\n        \n        <ul id='navigation'>\n          <li>"
+
+
+
+; @output_buffer.concat(( link_to "Home" ).to_s); @output_buffer.concat "</li>\n          "
+;  end ; @output_buffer.concat "\n        </ul>\n        <div class='clear'></div>\n      </div>\n\n      <div id='contents'>\n        <div id='page_title_container'>\n          \n        </div>\n        \n        "
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( display_flash(flash) ).to_s); @output_buffer.concat "\n        \n        "
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n        \n        <div id='root_footer'></div>\n\n      </div>\n      \n      <div id='footer'>\n        &copy "
+
+
+
+
+
+
+; @output_buffer.concat(( Time.now.year ).to_s); @output_buffer.concat " "; @output_buffer.concat((h SITE_CONFIG[:copyright] ).to_s); @output_buffer.concat ". All Rights Reserved.\n      </div>\n      \n    </div>\n  </body>\n</html>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:42:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:347:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:42: syntax error, unexpected kENSURE, expecting $end) on line #42 of app/views/layouts/themes.html.erb:
+39:     </div>
+40:   </body>
+41: </html>
+
+    app/views/layouts/themes.html.erb:42:in `compile!'
+
+Rendered rescues/_trace (74.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:51:10) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47layouts47themes46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47themes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>"
+
+; @output_buffer.concat((h SITE_CONFIG[:app_name] ).to_s); @output_buffer.concat " | "; @output_buffer.concat((h yield(:title) ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( use_theme('slicehost') ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n  \n    <div id='root'>\n      <div id='header'>\n\n        <div id='logo'>\n          "
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) ).to_s); @output_buffer.concat "\n        </div>\n        \n        <ul id='navigation'>\n          <li>"
+
+
+
+; @output_buffer.concat(( link_to "Home" ).to_s); @output_buffer.concat "</li>\n          "
+;  end ; @output_buffer.concat "\n        </ul>\n        <div class='clear'></div>\n      </div>\n\n      <div id='contents'>\n        <div id='page_title_container'>\n          <h1 class='title'>"
+
+
+
+
+
+
+; @output_buffer.concat(( yield(:title) || "Untitled" ).to_s); @output_buffer.concat "</h1>\n          <h3 class='subtitle'>"
+; @output_buffer.concat(( yield(:subtitle) || "Description goes here" ).to_s); @output_buffer.concat "</h3>\n        </div>\n        \n        "
+
+
+; @output_buffer.concat(( display_flash(flash) ).to_s); @output_buffer.concat "\n        \n        "
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n        \n        <div id='root_footer'></div>\n\n      </div>\n      \n      <div id='footer'>\n        &copy "
+
+
+
+
+
+
+; @output_buffer.concat(( Time.now.year ).to_s); @output_buffer.concat " "; @output_buffer.concat((h SITE_CONFIG[:copyright] ).to_s); @output_buffer.concat ". All Rights Reserved.\n      </div>\n      \n    </div>\n  </body>\n</html>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:347:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43: syntax error, unexpected kENSURE, expecting $end) on line #43 of app/views/layouts/themes.html.erb:
+40:     </div>
+41:   </body>
+42: </html>
+
+    app/views/layouts/themes.html.erb:43:in `compile!'
+
+Rendered rescues/_trace (71.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (3.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:51:30) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47layouts47themes46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47themes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>"
+
+; @output_buffer.concat((h SITE_CONFIG[:app_name] ).to_s); @output_buffer.concat " | "; @output_buffer.concat((h yield(:title) ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( use_theme('slicehost') ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n  \n    <div id='root'>\n      <div id='header'>\n\n        <div id='logo'>\n          "
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) ).to_s); @output_buffer.concat "\n        </div>\n        \n        <ul id='navigation'>\n          <li>"
+
+
+
+; @output_buffer.concat(( link_to "Home" ).to_s); @output_buffer.concat "</li>\n          "
+;  end ; @output_buffer.concat "\n        </ul>\n        <div class='clear'></div>\n      </div>\n\n      <div id='contents'>\n        <div id='page_title_container'>\n          <h1 class='title'>"
+
+
+
+
+
+
+; @output_buffer.concat(( yield(:title) || "Untitled" ).to_s); @output_buffer.concat "</h1>\n          <h3 class='subtitle'>"
+; @output_buffer.concat(( yield(:subtitle) || "Description goes here" ).to_s); @output_buffer.concat "</h3>\n        </div>\n        \n        "
+
+
+; @output_buffer.concat(( display_flash(flash) ).to_s); @output_buffer.concat "\n        \n        "
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n        \n        <div id='root_footer'></div>\n\n      </div>\n      \n      <div id='footer'>\n        &copy "
+
+
+
+
+
+
+; @output_buffer.concat(( Time.now.year ).to_s); @output_buffer.concat " "; @output_buffer.concat((h SITE_CONFIG[:copyright] ).to_s); @output_buffer.concat ". All Rights Reserved.\n      </div>\n      \n    </div>\n  </body>\n</html>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:347:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/layouts/themes.html.erb:43: syntax error, unexpected kENSURE, expecting $end) on line #43 of app/views/layouts/themes.html.erb:
+40:     </div>
+41:   </body>
+42: </html>
+
+    app/views/layouts/themes.html.erb:43:in `compile!'
+
+Rendered rescues/_trace (74.1ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:51:48) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 141ms (View: 134, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 01:51:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:52:26) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 49ms (View: 46, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 01:52:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:52:45) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 201ms (View: 198, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 01:52:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:52:58) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+ERROR: compiling _run_erb_app47views47home47index46html46erb RAISED compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/home/index.html.erb:1: syntax error, unexpected '=', expecting kEND
+..._erb_template=true ;  :title = "Petshop WEB ERP" ; @output_b...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/home/index.html.erb:2: syntax error, unexpected '=', expecting kEND
+;  :subtitle = "Sistema de ERP via WEB para ...
+              ^
+Function body:           def _run_erb_app47views47home47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  :title = "Petshop WEB ERP" ; @output_buffer.concat "\n"
+;  :subtitle = "Sistema de ERP via WEB para Petshops." ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/targino/desenvolvimento/rails/petshop/petshop/app/views/home/index.html.erb:6:in `compile!'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:61:in `compile'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/renderable.rb:28:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/template.rb:199:in `render_template'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:260:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:343:in `_render_with_layout'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_view/base.rb:257:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1326:in `default_render'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/flash.rb:146:in `perform_action'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `send'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:391:in `process'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/base.rb:386:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:9:in `cache'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/failsafe.rb:26:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:114:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/reloader.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:108:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/targino/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/home/targino/desenvolvimento/rails/petshop/petshop/vendor/rails/railties/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/home/index.html.erb:1: syntax error, unexpected '=', expecting kEND
+..._erb_template=true ;  :title = "Petshop WEB ERP" ; @output_b...
+                              ^
+/home/targino/desenvolvimento/rails/petshop/petshop/app/views/home/index.html.erb:2: syntax error, unexpected '=', expecting kEND
+;  :subtitle = "Sistema de ERP via WEB para ...
+              ^) on line #1 of app/views/home/index.html.erb:
+1: <% :title = "Petshop WEB ERP" %>
+2: <% :subtitle = "Sistema de ERP via WEB para Petshops." %>
+
+    app/views/home/index.html.erb:6:in `compile!'
+
+Rendered rescues/_trace (74.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:53:08) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 44ms (View: 36, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 01:53:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:54:01) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 01:54:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-05 01:56:19) [GET]
+Rendering template within layouts/themes
+Rendering home/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 01:56:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-05 01:56:25) [GET]
+Rendering template within layouts/themes
+Rendering sessions/new
+Completed in 91ms (View: 88, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 01:56:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-05 02:01:45) [GET]
+Rendering template within layouts/themes
+Rendering sessions/new
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:01:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-05 02:06:51) [GET]
+Rendering template within layouts/themes
+Rendering sessions/new
+Completed in 32ms (View: 24, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:06:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-05 02:07:06) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'petshop_development.users' doesn't exist: SHOW FIELDS FROM `users`[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'petshop_development.users' doesn't exist: SHOW FIELDS FROM `users`):
+  app/controllers/users_controller.rb:8:in `new'
+  app/controllers/users_controller.rb:8:in `new'
+
+Rendered rescues/_trace (77.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (42.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (264.8ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (98.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (11.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100205045611)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (19.5ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `name` varchar(100) DEFAULT '', `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (50.3ms)[0m   [0;1mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100205045611')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (24.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-05 02:07:29) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/themes
+Rendering users/new
+Completed in 82ms (View: 31, DB: 2) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (36.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:07:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-02-05 02:08:42) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-02-05 02:09:30) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-02-05 02:09:41) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-05 02:10:01) [GET]
+Rendering template within layouts/themes
+Rendering sessions/new
+Completed in 278ms (View: 269, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 02:10:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

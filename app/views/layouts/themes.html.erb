@@ -14,24 +14,16 @@
         
         <ul id='navigation'>
           <li><%= link_to "Home" %></li>
-          
-          <% if session[:user_id].blank? %>
-            <li><%= link_to "Log in" %></li>
-            <li><%= link_to "Contact us" %></li>
-
-          <% else %>
-            <li><%= link_to "Log out <span class=\"small\">(username)</span>" %></li>
-          
-          <% end %>
         </ul>
         <div class='clear'></div>
       </div>
 
       <div id='contents'>
-        <div id='page_title_container'>
+       <!-- <div id='page_title_container'>
           <h1 class='title'><%= yield(:title) || "Untitled" %></h1>
           <h3 class='subtitle'><%= yield(:subtitle) || "Description goes here" %></h3>
-        </div>
+        </div>-->
+       <!-- Codigo desativado por falta de necessariedade....-->
         
         <%= display_flash(flash) %>
         
