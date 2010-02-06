@@ -9,11 +9,13 @@
       <div id='header'>
 
         <div id='logo'>
-          <%= link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) %>
+          <%= link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) %> <br />
+          <!--<b>Versão 0.0.1 <%= link_to 'Saiba das auterações', :controller => 'home', :action => 'change_log' %></b>-->
         </div>
         
         <ul id='navigation'>
-          <li><%= link_to "Home" %></li>
+          <li><%= link_to "Home", :controller => "Home" %></li>
+          <li><%= link_to "Sair do Sistema", '/logout' %></li>
         </ul>
         <div class='clear'></div>
       </div>

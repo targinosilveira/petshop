@@ -5,18 +5,15 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
-  validates_presence_of     :login
-  validates_length_of       :login,    :within => 3..40
-  validates_uniqueness_of   :login
-  validates_format_of       :login,    :with => Authentication.login_regex, :message => Authentication.bad_login_message
+  validates_presence_of     :login,                                         :message => "É preciso informar um nome de usuário."
+  validates_length_of       :login,    :within => 3..40,                    :message => "Seu nome de usuário de ter entre 3 a 40 caracteres."
+  validates_uniqueness_of   :login,                                         :message => "Nome de usuário já cadastrado no sistema."
+  validates_format_of       :login,    :with => Authentication.login_regex, :message => "No nome de usuário use somente letras e números."
 
-  validates_format_of       :name,     :with => Authentication.name_regex,  :message => Authentication.bad_name_message, :allow_nil => true
-  validates_length_of       :name,     :maximum => 100
-
-  validates_presence_of     :email
-  validates_length_of       :email,    :within => 6..100 #r@a.wk
-  validates_uniqueness_of   :email
-  validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
+  validates_presence_of     :email,                                         :message => "É preciso informar um endereço de e-mail."
+  validates_length_of       :email,    :within => 6..100,                   :message => 'Seu endereço de e-mail deve ter entre 6 e 100 caracteres.'
+  validates_uniqueness_of   :email,                                         :message => "Endereço de e-mail já cadstradro no sistema."
+  validates_format_of       :email,    :with => Authentication.email_regex, :message => "Endereço de e-mail com formato inva"
 
   
 

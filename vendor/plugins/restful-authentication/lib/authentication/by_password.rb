@@ -8,10 +8,10 @@ module Authentication
         
         # Virtual attribute for the unencrypted password
         attr_accessor :password
-        validates_presence_of     :password,                   :if => :password_required?
-        validates_presence_of     :password_confirmation,      :if => :password_required?
-        validates_confirmation_of :password,                   :if => :password_required?
-        validates_length_of       :password, :within => 6..40, :if => :password_required?
+        validates_presence_of     :password,                   :if => :password_required?, :message => "É preciso informa sua senha."
+        validates_presence_of     :password_confirmation,      :if => :password_required?, :message => "É preciso fazer a confirmação da sua senha."
+        validates_confirmation_of :password,                   :if => :password_required?, :message => "Confirmação de senha diferente da senha informada."
+        validates_length_of       :password, :within => 6..40, :if => :password_required?, :message => "Sua senha deve ter entre 6 a 40 caracteres."
         before_save :encrypt_password
       end
     end # #included directives
