@@ -1,7 +1,5 @@
 <h1>Entrar no Sistema</h1>
 
-<p style="color: red">Sistema provisoriamente em modo de teste.</p>
-
 <% form_tag session_path do -%>
 <p><%= label_tag 'Nome de Usuario: ' %><br />
 <%= text_field_tag 'login', @login %></p>
@@ -9,10 +7,13 @@
 <p><%= label_tag 'Senha: ' %><br/>
 <%= password_field_tag 'password', nil %></p>
 
+<p>Para ver uma demonstração do sistema e ver suas features antes de se registrar.<br />
+  Entre com o nome de usuário: <b>admin</b> e a senha: <b>123456</b></p>
+
 <!-- Uncomment this if you want this functionality
 <p><%= label_tag 'remember_me', 'Remember me' %>
 <%= check_box_tag 'remember_me', '1', @remember_me %></p>
 -->
 
-<p><%= submit_tag 'Entrar' %></p>
+<p><%= submit_tag 'Entrar' %> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/signup" id="registrese">Registre-se e use gratuitamente.</a>
 <% end -%>

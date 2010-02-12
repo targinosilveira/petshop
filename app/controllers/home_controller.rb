@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  include AuthenticatedSystem
+  
   before_filter :login_required
 
   def index
