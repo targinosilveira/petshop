@@ -1,0 +1,6 @@
+log/production.log
+log/development.log
+log/test.log
+tmp/**
+config/database.yml
+
