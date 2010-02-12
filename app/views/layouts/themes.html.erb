@@ -10,12 +10,17 @@
 
         <div id='logo'>
           <%= link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) %> <br />
-          <!--<b>Versão 0.0.1 <%= link_to 'Saiba das auterações', :controller => 'home', :action => 'change_log' %></b>-->
+        </div>
+        <div id='change_log'>
+          Versão 0.0.1  - 06/02/2010
+          <%= link_to 'Veja nosso log de alterações.', :controller => 'geral', :action => 'change_log' %> <br />
         </div>
         
         <ul id='navigation'>
-          <li><%= link_to "Home", :controller => "Home" %></li>
-          <li><%= link_to "Sair do Sistema", '/logout' %></li>
+          <li><%= link_to 'Home', :controller => 'Home' %></li>
+          <% if logged_in?  %>
+            <li><%= link_to "Sair do Sistema", '/logout' %></li>
+          <% end %>
         </ul>
         <div class='clear'></div>
       </div>
