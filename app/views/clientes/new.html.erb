@@ -3,16 +3,19 @@
 <% form_for(@cliente) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.label :rg %><br />
-    <%= f.text_field :rg %>
-  </p>
-  <p>
-<%= f.submit 'Salvar' %> &nbsp; &nbsp; &nbsp; &nbsp; <%= link_to 'Cancelar', clientes_path %>
-  </p>
+<table>
+  <tr>
+    <td><%= f.label :nome %></td>
+    <td><%= f.text_field :nome %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><%= f.submit 'Salvar' %> &nbsp; &nbsp; &nbsp; &nbsp; <%= link_to 'Cancelar', clientes_path %></td>
+  </tr>
+</table>
+
 <% end %>
 
