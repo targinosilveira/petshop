@@ -3,4 +3,5 @@ log/development.log
 log/test.log
 tmp/**
 config/database.yml
+db/schema.rb
 

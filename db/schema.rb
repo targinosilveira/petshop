@@ -9,7 +9,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100205045611) do
+ActiveRecord::Schema.define(:version => 20100212055853) do
+
+  create_table "clientes", :force => true do |t|
+    t.string   "nome"
+    t.string   "rg"
+    t.string   "cpf_cnpj"
+    t.string   "endereco"
+    t.string   "complemento"
+    t.string   "bairro"
+    t.string   "cep"
+    t.integer  "estado_id"
+    t.integer  "cidade_id"
+    t.string   "telefone_residencial"
+    t.string   "telefone_trabalho"
+    t.string   "celular"
+    t.string   "celular_secundario"
+    t.string   "email"
+    t.string   "twitter"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
