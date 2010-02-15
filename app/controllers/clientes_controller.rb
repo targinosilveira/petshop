@@ -1,4 +1,8 @@
 class ClientesController < ApplicationController
+
+  include AuthenticatedSystem
+  before_filter :login_required
+
   # GET /clientes
   # GET /clientes.xml
   def index
@@ -24,6 +28,7 @@ class ClientesController < ApplicationController
   # GET /clientes/new
   # GET /clientes/new.xml
   def new
+    @estados = Estado.all
     @cliente = Cliente.new
 
     respond_to do |format|
@@ -82,4 +87,12 @@ class ClientesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def lista_cidades
+    unless params[:cliente_estado_id].blank?
+      @cidades = Cidade.find(:all, :conditions => ["estado_id = ?", params[:cliente_estado_id]], :order => "nome")
+      render :layout => false
+    end
+  end
+
 end

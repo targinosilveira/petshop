@@ -2,6 +2,7 @@
   <head>
     <title><%=h SITE_CONFIG[:app_name] %> | <%=h yield(:title) %></title>
     <%= use_theme('slicehost') %>
+    <%= javascript_include_tag :defaults %>
   </head>
   <body>
   

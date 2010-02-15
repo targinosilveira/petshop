@@ -5,12 +5,63 @@
 
 <table>
   <tr>
-    <td><%= f.label :nome %></td>
+    <td><%= f.label :nome, "Nome:" %></td>
     <td><%= f.text_field :nome %></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td><%= f.label :rg, "RG:" %></td>
+    <td><%= f.text_field :rg %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :cpf_cnpj, "CPF/CNPJ:" %></td>
+    <td><%= f.text_field :cpf_cnpj %> </td>
+  </tr>
+  <tr>
+    <td><%= f.label :endereco, "Endereço: " %></td>
+    <td><%= f.text_field :endereco %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :complemento, "Complemento:" %></td>
+    <td><%= f.text_field :complemento %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :bairro, "Bairro:" %></td>
+    <td><%= f.text_field :bairro %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :cep, "CEP: " %></td>
+    <td><%= f.text_field :cep %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :estado_id, "Estado: " %></td>
+    <td><%= f.select :estado_id, "<option>Selecione o estado.</option>" << options_for_select(@estados.collect { |e| [e.sigla, e.id]})%></td>
+  </tr>
+  <tr id="lista_cidades">
+
+  </tr>
+  <tr>
+    <td><%= f.label :telefone_residencial %></td>
+    <td><%= f.text_field :telefone_residencial%></td>
+  </tr>
+  <tr>
+    <td><%= f.label :telefone_trabalho %></td>
+    <td><%= f.text_field :telefone_trabalho  %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :celular %></td>
+    <td><%= F.text_field :celular %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :celular_secundario %></td>
+    <td><%= f.text_field :celular_secundario  %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :email %></td>
+    <td><%= f.text_field :email %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :twitter %></td>
+    <td><%= f.text_field :twitter %></td>
   </tr>
   <tr>
     <td><%= f.submit 'Salvar' %> &nbsp; &nbsp; &nbsp; &nbsp; <%= link_to 'Cancelar', clientes_path %></td>
@@ -19,3 +70,7 @@
 
 <% end %>
 
+<%= observe_field 'cliente_estado_id',
+    :url    => { :action => 'lista_cidades' },
+    :with   => 'cliente_estado_id',
+    :update => 'lista_cidades' %>
