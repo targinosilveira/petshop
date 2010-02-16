@@ -13,7 +13,7 @@
       </tr>
       <tr>
         <td><%= f.label :cpf_cnpj, "CPF/CNPJ:" %></td>
-        <td><%= f.text_field :cpf_cnpj, :maxlength => "18", :onkeypress => 'mascara(this,cpf_cnpj)' %> </td>
+        <td><%= f.text_field :cpf_cnpj, :maxlength => "18", :onkeypress => 'mascara(this,cpf_cnpj)', :onfocus => 'mascara(this,cpf_cnpj)' %> </td>
       </tr>
       <tr>
         <td><%= f.label :endereco, "Endereço: " %></td>
@@ -29,7 +29,7 @@
       </tr>
       <tr>
         <td><%= f.label :cep, "CEP: " %></td>
-        <td><%= f.text_field :cep, :maxlength => "9", :onkeypress => 'mascara(this,cep)' %></td>
+        <td><%= f.text_field :cep, :maxlength => "9", :onkeypress => 'mascara(this,cep)', :onfocus => 'mascara(this,cep)' %></td>
       </tr>
       <tr>
         <td><%= f.label :estado_id, "Estado: " %></td>
@@ -42,19 +42,19 @@
       </tr>
       <tr>
         <td><%= f.label :telefone_residencial, "Telefone Residencial:" %></td>
-        <td><%= f.text_field :telefone_residencial, :maxlength => "14", :onkeypress => 'mascara(this,telefone)'  %></td>
+        <td><%= f.text_field :telefone_residencial, :maxlength => "14", :onkeypress => 'mascara(this,telefone)', :onfocus => 'mascara(this,telefone)' %></td>
       </tr>
       <tr>
         <td><%= f.label :telefone_trabalho, "Telefone Comercial: " %></td>
-        <td><%= f.text_field :telefone_trabalho, :maxlength => "14", :onkeypress => 'mascara(this,telefone)'   %></td>
+        <td><%= f.text_field :telefone_trabalho, :maxlength => "14", :onkeypress => 'mascara(this,telefone)', :onfocus => 'mascara(this,telefone)' %></td>
       </tr>
       <tr>
         <td><%= f.label :celular, "Celular: " %></td>
-        <td><%= f.text_field :celular, :maxlength => "14", :onkeypress => 'mascara(this,telefone)'  %></td>
+        <td><%= f.text_field :celular, :maxlength => "14", :onkeypress => 'mascara(this,telefone)', :onfocus => 'mascara(this,telefone)' %></td>
       </tr>
       <tr>
         <td><%= f.label :celular_secundario, "Outro Celular: " %></td>
-        <td><%= f.text_field :celular_secundario, :maxlength => "14", :onkeypress => 'mascara(this,telefone)'   %></td>
+        <td><%= f.text_field :celular_secundario, :maxlength => "14", :onkeypress => 'mascara(this,telefone)', :onfocus => 'mascara(this,telefone)' %></td>
       </tr>
       <tr>
         <td><%= f.label :email, "E-mail: " %></td>

@@ -65,7 +65,7 @@ class ClientesController < ApplicationController
   # PUT /clientes/1.xml
   def update
     @cliente = Cliente.find(params[:id])
-    #params[:cliente] = formata_dados(params[:cliente])
+    params[:cliente] = formata_dados(params[:cliente])
 
     respond_to do |format|
       if @cliente.update_attributes(params[:cliente])
