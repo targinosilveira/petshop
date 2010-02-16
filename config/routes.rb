@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :animais
+
   map.resources :racas
 
   map.resources :tipos

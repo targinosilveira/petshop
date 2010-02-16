@@ -1,0 +1,13 @@
+<p>
+  <b>Nome:</b>
+  <%=h @animal.nome %>
+</p>
+
+<p>
+  <b>Cliente:</b>
+  <%=h @animal.cliente_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'Back', animais_path %>
