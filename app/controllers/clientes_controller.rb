@@ -39,12 +39,14 @@ class ClientesController < ApplicationController
 
   # GET /clientes/1/edit
   def edit
+    @estados = Estado.all
     @cliente = Cliente.find(params[:id])
   end
 
   # POST /clientes
   # POST /clientes.xml
   def create
+    params[:cliente] = formata_dados(params[:cliente])
     @cliente = Cliente.new(params[:cliente])
 
     respond_to do |format|
@@ -63,6 +65,7 @@ class ClientesController < ApplicationController
   # PUT /clientes/1.xml
   def update
     @cliente = Cliente.find(params[:id])
+    #params[:cliente] = formata_dados(params[:cliente])
 
     respond_to do |format|
       if @cliente.update_attributes(params[:cliente])
@@ -94,5 +97,30 @@ class ClientesController < ApplicationController
       render :layout => false
     end
   end
+
+  def formata_dados(params)
+    params[:cpf_cnpj] = params[:cpf_cnpj].gsub(".","") if params[:cpf_cnpj]
+    params[:cpf_cnpj] = params[:cpf_cnpj].gsub("-","") if params[:cpf_cnpj]
+    params[:cpf_cnpj] = params[:cpf_cnpj].gsub("/","") if params[:cpf_cnpj]
+    params[:cep] = params[:cep].gsub("-","") if params[:cep]
+    params[:telefone_residencial] = params[:telefone_residencial].gsub("(","") if params[:telefone_residencial]
+    params[:telefone_residencial] = params[:telefone_residencial].gsub(")","") if params[:telefone_residencial]
+    params[:telefone_residencial] = params[:telefone_residencial].gsub("-","") if params[:telefone_residencial]
+    params[:telefone_residencial] = params[:telefone_residencial].gsub(" ","") if params[:telefone_residencial]
+    params[:telefone_trabalho] = params[:telefone_trabalho].gsub("(","") if params[:telefone_trabalho]
+    params[:telefone_trabalho] = params[:telefone_trabalho].gsub(")","") if params[:telefone_trabalho]
+    params[:telefone_trabalho] = params[:telefone_trabalho].gsub("-","") if params[:telefone_trabalho]
+    params[:telefone_trabalho] = params[:telefone_trabalho].gsub(" ","") if params[:telefone_trabalho]
+    params[:celular] = params[:celular].gsub("(","") if params[:celular]
+    params[:celular] = params[:celular].gsub(")","") if params[:celular]
+    params[:celular] = params[:celular].gsub("-","") if params[:celular]
+    params[:celular] = params[:celular].gsub(" ","") if params[:celular]
+    params[:celular_secundario] = params[:celular_secundario].gsub("(","") if params[:celular_secundario]
+    params[:celular_secundario] = params[:celular_secundario].gsub(")","") if params[:celular_secundario]
+    params[:celular_secundario] = params[:celular_secundario].gsub("-","") if params[:celular_secundario]
+    params[:celular_secundario] = params[:celular_secundario].gsub(" ","") if params[:celular_secundario]
+    params
+  end
+
 
 end
