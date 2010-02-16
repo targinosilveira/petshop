@@ -2,7 +2,8 @@ class AnimaisController < ApplicationController
   # GET /animais
   # GET /animais.xml
   def index
-    @animais = Animal.all
+    @cliente = Cliente.find(params[:cliente])
+    @animais = @cliente.animais.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +25,8 @@ class AnimaisController < ApplicationController
   # GET /animais/new
   # GET /animais/new.xml
   def new
-    @animal = Animal.new
+    @cliente = Cliente.find(params[:cliente])
+    @animal = @cliente.animais.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,7 +46,7 @@ class AnimaisController < ApplicationController
 
     respond_to do |format|
       if @animal.save
-        flash[:notice] = 'Animal was successfully created.'
+        flash[:notice] = 'Registro salvo com sucesso..'
         format.html { redirect_to(@animal) }
         format.xml  { render :xml => @animal, :status => :created, :location => @animal }
       else
@@ -61,7 +63,7 @@ class AnimaisController < ApplicationController
 
     respond_to do |format|
       if @animal.update_attributes(params[:animal])
-        flash[:notice] = 'Animal was successfully updated.'
+        flash[:notice] = 'Registro atualizado com sucesso.'
         format.html { redirect_to(@animal) }
         format.xml  { head :ok }
       else

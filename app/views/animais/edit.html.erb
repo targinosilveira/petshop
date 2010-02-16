@@ -1,15 +1,11 @@
-<h1>Editing animal</h1>
+<h1>Editando Animaiss</h1>
 
 <% form_for(@animal) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :nome %><br />
+    <%= f.label :nome, "Nome: *" %><br />
     <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.label :cliente_id %><br />
-    <%= f.text_field :cliente_id %>
   </p>
   <p>
     <%= f.submit 'Update' %>

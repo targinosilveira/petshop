@@ -1,15 +1,17 @@
-<h1>Listing animais</h1>
+<h1>Listando Animais</h1>
+
+<h3>Cliente: <%= @cliente.nome %></h3>
+
+<%= link_to 'Novo', new_animal_path({:cliente => @cliente.id}) %><br /><br />
 
 <table>
   <tr>
     <th>Nome</th>
-    <th>Cliente</th>
   </tr>
 
 <% @animais.each do |animal| %>
   <tr>
     <td><%=h animal.nome %></td>
-    <td><%=h animal.cliente_id %></td>
     <td><%= link_to 'Show', animal %></td>
     <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
     <td><%= link_to 'Destroy', animal, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -19,4 +21,4 @@
 
 <br />
 
-<%= link_to 'New animal', new_animal_path %>
+<%= link_to 'Novo', new_animal_path %>

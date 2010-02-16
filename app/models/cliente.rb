@@ -6,6 +6,7 @@ class Cliente < ActiveRecord::Base
   belongs_to :cidade
   belongs_to :estado
   belongs_to :user
+  has_many   :animais
 
   validates_presence_of     :nome,                                         :message => "É preciso informar um nome para o cliente."
   validates_presence_of     :cpf_cnpj,                                     :message => "É preciso infirmar um CPF/CNPJ para o cliente."

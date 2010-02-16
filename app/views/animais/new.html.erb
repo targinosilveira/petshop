@@ -1,19 +1,21 @@
-<h1>New animal</h1>
+<h1>Novo</h1>
+
+<b>Todos os campos com "*" são de preenchimento obrigatórios.</b><br /><br />
+
+<h3>Cliente: <%= @cliente.nome %></h3>
 
 <% form_for(@animal) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.label :cliente_id %><br />
-    <%= f.text_field :cliente_id %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+    <table>
+      <tr>
+        <td><%= f.label :nome, "Nome: *" %></td>
+        <td><%= f.text_field :nome %></td>
+      </tr>
+      <tr>
+        <td><%= f.submit 'Salvar' %> &nbsp;&nbsp;&nbsp;&nbsp; <%= link_to 'Cancelar', animais_path({:cliente => @cliente.id}) %></td>
+      </tr>
+    </table>
+
 <% end %>
 
-<%= link_to 'Back', animais_path %>

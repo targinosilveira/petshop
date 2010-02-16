@@ -12,6 +12,7 @@
   <tr>
     <td><%=h cliente.nome %></td>
     <td><%=h cliente.email %></td>
+    <td><%= link_to 'Animais', animais_path({:cliente => cliente.id}) %></td>
     <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
     <td><%= link_to 'Excluir', cliente, :confirm => 'Você tem certeza que deseja excluir esse registro?', :method => :delete %></td>
   </tr>
