@@ -6,7 +6,7 @@ class ClientesController < ApplicationController
   # GET /clientes
   # GET /clientes.xml
   def index
-    @clientes = Cliente.all
+    @clientes = Cliente.find(:all, :conditions => ["master_id = ?", current_user.master_id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -47,6 +47,7 @@ class ClientesController < ApplicationController
   # POST /clientes.xml
   def create
     params[:cliente] = formata_dados(params[:cliente])
+    @estados = Estado.all
     @cliente = Cliente.new(params[:cliente])
 
     respond_to do |format|
