@@ -1,22 +1,23 @@
-<h1>Listing racas</h1>
+<h1>Listando Raças</h1>
+
+<%= link_to 'Nova', new_raca_path %><br /><br />
 
 <table>
   <tr>
-    <th>Nome</th>
     <th>Tipo</th>
+    <th>Raça</th>
   </tr>
 
 <% @racas.each do |raca| %>
   <tr>
+    <td><%=h raca.tipo.nome %></td>
     <td><%=h raca.nome %></td>
-    <td><%=h raca.tipo_id %></td>
-    <td><%= link_to 'Show', raca %></td>
-    <td><%= link_to 'Edit', edit_raca_path(raca) %></td>
-    <td><%= link_to 'Destroy', raca, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Editar', edit_raca_path(raca) %></td>
+    <td><%= link_to 'Excluir', raca, :confirm => 'Você tem certeza que deseja excluir esse registro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New raca', new_raca_path %>
+<%= link_to 'Nova', new_raca_path %>

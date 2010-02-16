@@ -1,19 +1,22 @@
-<h1>New raca</h1>
+<h1>Nova</h1>
+
+<b>Todos os campos com "*" são de preenchimento obrigatórios.</b>
 
 <% form_for(@raca) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.label :tipo_id %><br />
-    <%= f.text_field :tipo_id %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+  <table>
+    <tr>
+      <td><%= f.label :nome, "Nome: *" %></td>
+      <td><%= f.text_field :nome %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :tipo_id, "Tipo de Animal: *" %></td>
+      <td><%= f.select :tipo_id, "<option>Selecione o tipo de animal.</option>" << options_for_select(@tipos.collect { |t| [t.nome, t.id]})%></td>
+    </tr>
+    <tr>
+      <td><%= f.submit 'Salvar' %> &nbsp; &nbsp; &nbsp; &nbsp; <%= link_to 'Cancelar', racas_path %></td>
+    </tr>
+  </table>
 
-<%= link_to 'Back', racas_path %>
+<% end %>

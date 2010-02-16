@@ -24,6 +24,7 @@ class RacasController < ApplicationController
   # GET /racas/new
   # GET /racas/new.xml
   def new
+    @tipos = Tipo.all
     @raca = Raca.new
 
     respond_to do |format|
@@ -34,18 +35,20 @@ class RacasController < ApplicationController
 
   # GET /racas/1/edit
   def edit
+    @tipos = Tipo.all
     @raca = Raca.find(params[:id])
   end
 
   # POST /racas
   # POST /racas.xml
   def create
+    @tipos = Tipo.all
     @raca = Raca.new(params[:raca])
 
     respond_to do |format|
       if @raca.save
-        flash[:notice] = 'Raca was successfully created.'
-        format.html { redirect_to(@raca) }
+        flash[:notice] = 'Registro salvo com sucesso.'
+        format.html { redirect_to(racas_url) }
         format.xml  { render :xml => @raca, :status => :created, :location => @raca }
       else
         format.html { render :action => "new" }
@@ -61,8 +64,8 @@ class RacasController < ApplicationController
 
     respond_to do |format|
       if @raca.update_attributes(params[:raca])
-        flash[:notice] = 'Raca was successfully updated.'
-        format.html { redirect_to(@raca) }
+        flash[:notice] = 'Registro atualizado com sucesso.'
+        format.html { redirect_to(racas_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
