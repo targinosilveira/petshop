@@ -1,0 +1,20 @@
+<h1>Editing raca</h1>
+
+<% form_for(@raca) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :tipo_id %><br />
+    <%= f.text_field :tipo_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @raca %> |
+<%= link_to 'Back', racas_path %>

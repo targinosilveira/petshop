@@ -1,0 +1,22 @@
+<h1>Listing racas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Tipo</th>
+  </tr>
+
+<% @racas.each do |raca| %>
+  <tr>
+    <td><%=h raca.nome %></td>
+    <td><%=h raca.tipo_id %></td>
+    <td><%= link_to 'Show', raca %></td>
+    <td><%= link_to 'Edit', edit_raca_path(raca) %></td>
+    <td><%= link_to 'Destroy', raca, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New raca', new_raca_path %>
