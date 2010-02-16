@@ -1,16 +1,18 @@
-<h1>Editing tipo</h1>
+<h1>Editando Tipo de Animal</h1>
+
+<b>Todos os campos com "*" são de preenchimento obrigatórios.</b>
 
 <% form_for(@tipo) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+  <table>
+    <tr>
+      <td><%= f.label :nome, "Nome: *" %></td>
+      <td><%= f.text_field :nome %></td>
+    </tr>
+    <tr>
+      <td><%= f.submit 'Salvar' %> &nbsp; &nbsp; &nbsp; &nbsp; <%= link_to 'Cancelar', tipos_path %></td>
+    </tr>
+  </table>
 
-<%= link_to 'Show', @tipo %> |
-<%= link_to 'Back', tipos_path %>
+<% end %>

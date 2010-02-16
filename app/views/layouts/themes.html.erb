@@ -26,6 +26,7 @@
           <li><%= link_to 'Home', :controller => 'Home' %></li>
           <% if logged_in?  %>
             <li><%= link_to "Clientes", :controller => 'clientes', :action => 'index' %></li>
+            <li><%= link_to "Tipos de Animais", :controller => 'tipos', :action => 'index' %></li>
             <li><%= link_to "Sair do Sistema", '/logout' %></li>
           <% end %>
         </ul>

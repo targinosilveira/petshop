@@ -1,10 +1,13 @@
 <h1>Editing cliente</h1>
 
+<b>Todos os campos com "*" são de preenchimento obrigatórios.</b>
+
 <% form_for(@cliente) do |f| %>
   <%= f.error_messages %>
+
     <table>
       <tr>
-        <td><%= f.label :nome, "Nome:" %></td>
+        <td><%= f.label :nome, "Nome: *" %></td>
         <td><%= f.text_field :nome %></td>
       </tr>
       <tr>
@@ -12,7 +15,7 @@
         <td><%= f.text_field :rg, :maxlength => "14" %></td>
       </tr>
       <tr>
-        <td><%= f.label :cpf_cnpj, "CPF/CNPJ:" %></td>
+        <td><%= f.label :cpf_cnpj, "CPF/CNPJ: *" %></td>
         <td><%= f.text_field :cpf_cnpj, :maxlength => "18", :onkeypress => 'mascara(this,cpf_cnpj)', :onfocus => 'mascara(this,cpf_cnpj)' %> </td>
       </tr>
       <tr>
@@ -32,7 +35,7 @@
         <td><%= f.text_field :cep, :maxlength => "9", :onkeypress => 'mascara(this,cep)', :onfocus => 'mascara(this,cep)' %></td>
       </tr>
       <tr>
-        <td><%= f.label :estado_id, "Estado: " %></td>
+        <td><%= f.label :estado_id, "Estado: *" %></td>
         <td><%= f.select :estado_id, "<option value=#{@cliente.estado.id}>
         #{@cliente.estado.sigla}</option>" << options_for_select(@estados.collect { |e| [e.sigla, e.id]})%></td>
       </tr>
@@ -49,7 +52,7 @@
         <td><%= f.text_field :telefone_trabalho, :maxlength => "14", :onkeypress => 'mascara(this,telefone)', :onfocus => 'mascara(this,telefone)' %></td>
       </tr>
       <tr>
-        <td><%= f.label :celular, "Celular: " %></td>
+        <td><%= f.label :celular, "Celular: *" %></td>
         <td><%= f.text_field :celular, :maxlength => "14", :onkeypress => 'mascara(this,telefone)', :onfocus => 'mascara(this,telefone)' %></td>
       </tr>
       <tr>
@@ -57,7 +60,7 @@
         <td><%= f.text_field :celular_secundario, :maxlength => "14", :onkeypress => 'mascara(this,telefone)', :onfocus => 'mascara(this,telefone)' %></td>
       </tr>
       <tr>
-        <td><%= f.label :email, "E-mail: " %></td>
+        <td><%= f.label :email, "E-mail: *" %></td>
         <td><%= f.text_field :email %></td>
       </tr>
       <tr>

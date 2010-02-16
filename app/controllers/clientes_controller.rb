@@ -53,7 +53,7 @@ class ClientesController < ApplicationController
     respond_to do |format|
       if @cliente.save
         flash[:notice] = 'Registro salvo com sucesso.'
-        format.html { redirect_to(@cliente) }
+        format.html { redirect_to(clientes_url) }
         format.xml  { render :xml => @cliente, :status => :created, :location => @cliente }
       else
         format.html { render :action => "new" }
@@ -71,7 +71,7 @@ class ClientesController < ApplicationController
     respond_to do |format|
       if @cliente.update_attributes(params[:cliente])
         flash[:notice] = 'Registro atualizado com sucesso.'
-        format.html { redirect_to(@cliente) }
+        format.html { redirect_to(clientes_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -44,8 +44,8 @@ class TiposController < ApplicationController
 
     respond_to do |format|
       if @tipo.save
-        flash[:notice] = 'Tipo was successfully created.'
-        format.html { redirect_to(@tipo) }
+        flash[:notice] = 'Registro salvo com sucesso.'
+        format.html { redirect_to(tipos_url) }
         format.xml  { render :xml => @tipo, :status => :created, :location => @tipo }
       else
         format.html { render :action => "new" }
@@ -61,8 +61,8 @@ class TiposController < ApplicationController
 
     respond_to do |format|
       if @tipo.update_attributes(params[:tipo])
-        flash[:notice] = 'Tipo was successfully updated.'
-        format.html { redirect_to(@tipo) }
+        flash[:notice] = 'Registro atualizado com sucesso.'
+        format.html { redirect_to(tipos_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

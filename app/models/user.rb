@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   validates_presence_of     :email,                                         :message => "É preciso informar um endereço de e-mail."
   validates_length_of       :email,    :within => 6..100,                   :message => 'Seu endereço de e-mail deve ter entre 6 e 100 caracteres.'
   validates_uniqueness_of   :email,                                         :message => "Endereço de e-mail já cadstradro no sistema."
-  validates_format_of       :email,    :with => Authentication.email_regex, :message => "Endereço de e-mail com formato inva"
+  validates_format_of       :email,    :with => Authentication.email_regex, :message => "Endereço de e-mail com formato inválido."
 
   
 
