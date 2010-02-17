@@ -12,9 +12,8 @@
 <% @animais.each do |animal| %>
   <tr>
     <td><%=h animal.nome %></td>
-    <td><%= link_to 'Show', animal %></td>
-    <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
-    <td><%= link_to 'Destroy', animal, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Editar', edit_animal_path(animal) %></td>
+    <td><%= link_to 'Excluir', animal, :confirm => 'Você tem certeza que deseja excluir esse registro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

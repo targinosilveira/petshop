@@ -7,6 +7,8 @@
 <% form_for(@animal) do |f| %>
   <%= f.error_messages %>
 
+    <%= hidden_field_tag 'animal[cliente_id]', @cliente.id  %>
+
     <table>
       <tr>
         <td><%= f.label :nome, "Nome: *" %></td>

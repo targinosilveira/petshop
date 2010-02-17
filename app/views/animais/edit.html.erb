@@ -3,13 +3,16 @@
 <% form_for(@animal) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :nome, "Nome: *" %><br />
-    <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+  <table>
+    <tr>
+      <td><%= f.label :nome, "Nome: *" %></td>
+      <td><%= f.text_field :nome %></td>
+    </tr>
+    <tr>
+      <td><%= f.submit 'Salvar' %> &nbsp;&nbsp;&nbsp;&nbsp; <%= link_to 'Cancelar', animais_path({:cliente => @animal.cliente_id}) %></td>
+    </tr>
+  </table>
+
 <% end %>
 
 <%= link_to 'Show', @animal %> |
