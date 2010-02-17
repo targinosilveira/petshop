@@ -46,11 +46,11 @@ class AnimaisController < ApplicationController
 
     respond_to do |format|
       if @animal.save
-        flash[:notice] = 'Registro salvo com sucesso..'
+        flash[:notice] = 'Registro salvo com sucesso.'
         format.html { redirect_to(animais_url({:cliente => @animal.cliente_id}))}
         format.xml  { render :xml => @animal, :status => :created, :location => @animal }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :cliente => @cliente.id }
         format.xml  { render :xml => @animal.errors, :status => :unprocessable_entity }
       end
     end
@@ -77,10 +77,11 @@ class AnimaisController < ApplicationController
   # DELETE /animais/1.xml
   def destroy
     @animal = Animal.find(params[:id])
+    cliente_id = @animal.cliente_id
     @animal.destroy
 
     respond_to do |format|
-      format.html { redirect_to(animais_url) }
+      format.html { redirect_to(animais_url({:cliente => cliente_id}))}
       format.xml  { head :ok }
     end
   end

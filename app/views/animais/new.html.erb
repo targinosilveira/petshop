@@ -2,7 +2,7 @@
 
 <b>Todos os campos com "*" são de preenchimento obrigatórios.</b><br /><br />
 
-<h3>Cliente: <%= @cliente.nome %></h3>
+<h3>Cliente: <%= @cliente.nome if @cliente.nome %></h3>
 
 <% form_for(@animal) do |f| %>
   <%= f.error_messages %>
@@ -13,6 +13,13 @@
       <tr>
         <td><%= f.label :nome, "Nome: *" %></td>
         <td><%= f.text_field :nome %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :estado_id, "Estado: *" %></td>
+        <td><%= f.select :estado_id, "<option>Selecione o estado.</option>" << options_for_select(@estados.collect { |e| [e.sigla, e.id]})%></td>
+      </tr>
+      <tr id="lista_racas">
+
       </tr>
       <tr>
         <td><%= f.submit 'Salvar' %> &nbsp;&nbsp;&nbsp;&nbsp; <%= link_to 'Cancelar', animais_path({:cliente => @cliente.id}) %></td>
