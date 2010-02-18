@@ -1,5 +1,6 @@
 class Raca < ActiveRecord::Base
   belongs_to :tipo
+  has_many   :animais
 
   validates_presence_of     :nome,                                         :message => "É preciso informar um nome de uma raça."
   validates_uniqueness_of   :nome,                                         :message => "Nome já cadastrado no sistema."

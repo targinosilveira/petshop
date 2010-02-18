@@ -4,6 +4,7 @@ class AnimaisController < ApplicationController
   def index
     @cliente = Cliente.find(params[:cliente])
     @animais = @cliente.animais.all
+    @tipo = 
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,6 +27,7 @@ class AnimaisController < ApplicationController
   # GET /animais/new.xml
   def new
     @cliente = Cliente.find(params[:cliente])
+    @tipos = Tipo.all
     @animal = @cliente.animais.new
 
     respond_to do |format|
@@ -36,6 +38,7 @@ class AnimaisController < ApplicationController
 
   # GET /animais/1/edit
   def edit
+    @tipos = Tipo.all
     @animal = Animal.find(params[:id])
   end
 
@@ -50,8 +53,11 @@ class AnimaisController < ApplicationController
         format.html { redirect_to(animais_url({:cliente => @animal.cliente_id}))}
         format.xml  { render :xml => @animal, :status => :created, :location => @animal }
       else
-        format.html { render :action => "new", :cliente => @cliente.id }
-        format.xml  { render :xml => @animal.errors, :status => :unprocessable_entity }
+        flash[:error] = 'Não foi possivel gravar o registro, verifique-o por favor.'
+        format.html { redirect_to(new_animal_path({:cliente => @animal.cliente_id}))}
+        #format.html { redirect_to(new_animal_path({:cliente => @cliente.id}))}
+        #format.html { render :action => "new", :cliente => @cliente.id }
+        #format.xml  { render :xml => @animal.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -85,4 +91,12 @@ class AnimaisController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+   def lista_racas
+    unless params[:animal_tipo_id].blank?
+      @racas = Raca.find(:all, :conditions => ["tipo_id = ?", params[:animal_tipo_id]], :order => "nome")
+      render :layout => false
+    end
+  end
+
 end

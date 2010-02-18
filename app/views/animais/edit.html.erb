@@ -11,11 +11,22 @@
       <td><%= f.text_field :nome %></td>
     </tr>
     <tr>
+      <td><%= f.label :tipo_id, "Tipo do Animal: *" %></td>
+      <td><%= f.select :tipo_id, "<option value=#{@animal.tipo.id}>
+        #{@animal.tipo.nome}</option>" << options_for_select(@tipos.collect { |t| [t.nome, t.id]})%></td>
+    </tr>
+    <tr id="lista_racas">
+      <td><%= label :raca_id, "Raça: *" %></td>
+      <td><%= text_field_tag :raca_id, @animal.raca.nome, :readonly => true %></td>
+    </tr>
+    <tr>
       <td><%= f.submit 'Salvar' %> &nbsp;&nbsp;&nbsp;&nbsp; <%= link_to 'Cancelar', animais_path({:cliente => @animal.cliente_id}) %></td>
     </tr>
   </table>
 
 <% end %>
 
-<%= link_to 'Show', @animal %> |
-<%= link_to 'Back', animais_path %>
+<%= observe_field 'animal_tipo_id',
+    :url    => { :action => 'lista_racas' },
+    :with   => 'animal_tipo_id',
+    :update => 'lista_racas' %>

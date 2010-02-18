@@ -15,8 +15,8 @@
         <td><%= f.text_field :nome %></td>
       </tr>
       <tr>
-        <td><%= f.label :estado_id, "Estado: *" %></td>
-        <td><%= f.select :estado_id, "<option>Selecione o estado.</option>" << options_for_select(@estados.collect { |e| [e.sigla, e.id]})%></td>
+        <td><%= f.label :tipo_id, "Tipo de Animal: *" %></td>
+        <td><%= f.select :tipo_id, "<option>Selecione o tipo de animal.</option>" << options_for_select(@tipos.collect { |t| [t.nome, t.id]})%></td>
       </tr>
       <tr id="lista_racas">
 
@@ -27,4 +27,9 @@
     </table>
 
 <% end %>
+
+<%= observe_field 'animal_tipo_id',
+    :url    => { :action => 'lista_racas' },
+    :with   => 'animal_tipo_id',
+    :update => 'lista_racas' %>
 

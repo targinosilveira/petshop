@@ -1,0 +1,3 @@
+<td><b>Raça: *</b></td>
+<td><%= select_tag 'animal[raca_id]',"<option>Selecione a raça....</option>" << options_for_select(@racas.collect {|r| [r.nome, r.id]}) %></td>
+
