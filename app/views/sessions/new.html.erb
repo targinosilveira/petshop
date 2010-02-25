@@ -15,5 +15,5 @@
 <%= check_box_tag 'remember_me', '1', @remember_me %></p>
 -->
 
-<p><%= submit_tag 'Entrar' %> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/signup" id="registrese">Registre-se e use gratuitamente.</a>
+<p><%= submit_tag 'Entrar' %> &nbsp;&nbsp;&nbsp;&nbsp; <%= link_to 'Registre-se e use gratuitamente.', {:controller => 'geral', :action => 'pricing'} , :id => "registrese" %></p>
 <% end -%>
