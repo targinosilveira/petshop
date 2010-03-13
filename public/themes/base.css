@@ -239,11 +239,18 @@ hr.space{background:#FFFFFF none repeat scroll 0 0;border:medium none;clear:both
 #root{display:inline-block;margin:0 auto;overflow:hidden;width:950px;}
 #root{display:block;}
 #flash_error,#flash_notice,#flash_success{padding-top:0.8em;padding-right:0.8em;padding-bottom:0.8em;padding-left:0.8em;margin-bottom:1em;border-width:2px;border-width-value:2px;border-width-ltr-source:physical;border-width-rtl-source:physical;border-style:solid;border-style-value:solid;border-style-ltr-source:physical;border-style-rtl-source:physical;border-top-color:#dddddd;background-image:none;background-repeat:repeat;background-attachment:scroll;background-position:0% 0%;}
-#flash_notice{background-color:#fff6bf;color:#514721;border-color:#ffd324;}
+#flash_notice{background-color:#fff6bf;color:#514721;border-color:#ffd324;width: 500px;}
 #flash_error{background-color:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
 #flash_success{background-color:#e6efc2;color:#264409;border-color:#c6d880;}
 #identificacao{
     float: right;
     padding-top: 1px;
     color: #333333;
+}
+
+#publicidade {
+    float: right;
+    margin-right: 20px;
+    width: 130px;
+    height: auto;
 }

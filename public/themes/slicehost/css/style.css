@@ -81,6 +81,7 @@ h1 {
 	padding: 15px;
 	border-bottom: 2px solid #aaa;
 	border-right: 2px solid #aaa;
+        min-height: 250px;
 }
 
 #page_title_container {

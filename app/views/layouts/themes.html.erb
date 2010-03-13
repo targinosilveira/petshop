@@ -19,7 +19,7 @@
         </div>
         <div id='change_log'>
           <b>
-            Versão 0.0.2  - 18/02/2010
+            Versão 0.0.3  - 13/03/2010
             <%= link_to 'Veja nosso log de alterações.', :controller => 'geral', :action => 'change_log' %> <br />
           </b>
         </div>
@@ -37,16 +37,31 @@
       </div>
 
       <div id='contents'>
+        
+        
        <!-- <div id='page_title_container'>
           <h1 class='title'><%= yield(:title) || "Untitled" %></h1>
           <h3 class='subtitle'><%= yield(:subtitle) || "Description goes here" %></h3>
         </div>-->
        <!-- Codigo desativado por falta de necessariedade....-->
-        
+
+       <div id="publicidade">
+          <script type="text/javascript"><!--
+            google_ad_client = "pub-3712988137688335"; /* 120x240, criado 12/03/10 */
+            google_ad_slot = "1742550471";
+            google_ad_width = 120;
+            google_ad_height = 240;
+            //-->
+          </script>
+          <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </div>
+
         <%= display_flash(flash) %>
-        
+
         <%= yield %>
-        
+
         <div id='root_footer'></div>
 
       </div>
