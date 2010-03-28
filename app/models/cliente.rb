@@ -12,6 +12,7 @@ class Cliente < ActiveRecord::Base
   validates_presence_of     :cpf_cnpj,                                     :message => "É preciso infirmar um CPF/CNPJ para o cliente."
   validate :valida_cpf_cnpj
   validates_presence_of     :estado_id,                                    :message => "É preciso informar o estado do cliente."
+  validates_presence_of     :cidade_id,                                    :message => "É preciso informar a cidade do cliente."
   validates_presence_of     :email,                                        :message => "É preciso informar um e-mail para o cliente."
   validates_length_of       :email,    :within => 6..100,                  :message => 'O endereço de e-mail deve ter entre 6 e 100 caracteres.'
   validates_uniqueness_of   :email,                                        :message => "Endereço de e-mail já cadstradro no sistema."

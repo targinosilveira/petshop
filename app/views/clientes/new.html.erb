@@ -38,7 +38,7 @@
     </tr>
     <tr>
       <td><%= f.label :estado_id, "Estado: *" %></td>
-      <td><%= f.select :estado_id, "<option>Selecione o estado.</option>" << options_for_select(@estados.collect { |e| [e.sigla, e.id]})%></td>
+      <td><%= f.select :estado_id, "<option value=''>Selecione o estado.</option>" << options_for_select(@estados.collect { |e| [e.sigla, e.id]})%></td>
     </tr>
     <tr id="lista_cidades">
 
